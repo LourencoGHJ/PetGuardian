@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SolicitacoesPendentes">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/title_solicitacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Solicitações de Cadastro"
+        android:textColor="@color/turquesa"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ListView para mostrar solicitações -->
+    <ListView
+        android:id="@+id/listViewSolicitacoes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:divider="@color/turquesa"
+        android:dividerHeight="1dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintTop_toBottomOf="@id/title_solicitacoes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/footer_text" />
+
+    <!-- Layout para exibir imagens -->
+    <LinearLayout
+        android:id="@+id/dialogImagesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/rounded_background"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Imagem do BI -->
+        <ImageView
+            android:id="@+id/biImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:contentDescription="Imagem de BI"
+            android:scaleType="centerCrop"
+            android:background="@drawable/ic_user_placeholder" />
+
+        <!-- Imagem de Inscrição -->
+        <ImageView
+            android:id="@+id/inscricaoImageView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Imagem de Inscrição"
+            android:scaleType="centerCrop"
+            android:background="@drawable/ic_user_placeholder" />
+    </LinearLayout>
+
+    <!-- Texto no rodapé -->
+    <TextView
+        android:id="@+id/footer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Toque em uma solicitação para mais detalhes"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

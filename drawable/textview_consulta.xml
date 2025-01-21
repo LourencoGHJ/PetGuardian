@@ -1,0 +1,17 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra ou fundo -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/turquesa3"/> <!-- Fundo transparente -->
+            <corners android:radius="16dp" /> <!-- Canto arredondado -->
+        </shape>
+    </item>
+
+    <!-- Borda arredondada -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" /> <!-- Sem preenchimento -->
+            <corners android:radius="16dp" /> <!-- Canto arredondado -->
+        </shape>
+    </item>
+</layer-list>

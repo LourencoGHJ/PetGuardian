@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/consulta_background"
+    tools:context=".PaginaConsulta">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/turquesa2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/title_pagconsulta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Consulta:"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Dados do Animal -->
+
+    <!-- Imagem do Animal -->
+    <TextView
+        android:id="@+id/dadosAnimal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/textview_consulta"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/pagAnimalImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_pagconsulta"
+        tools:text="Nome: Floquito\nMicrochip: 1706\nData de Nascimento: 01/12/2024" />
+
+    <ImageView
+        android:id="@+id/pagAnimalImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_pagconsulta" />
+
+    <!-- Dados do Veterinário e Proprietário -->
+    <TextView
+        android:id="@+id/dadosVetProp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/textview_consulta"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pagAnimalImage"
+        tools:text="Veterinário:\nNome: Dr. Guilherme\nContato: guilhermefaria@gmail.com\nNúmero de Ordem: 12345\n\nProprietário:\nNome: Emanuel Silva\nContato: emanuel@gmail.com" />
+
+
+    <!-- Botão Observações -->
+    <FrameLayout
+        android:id="@+id/buttVacina"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="428dp"
+        android:background="@drawable/textview_consulta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ícone de vacina -->
+        <ImageView
+            android:id="@+id/iconVacina"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_vaccine"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:text="VACINAS"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/buttExam"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="428dp"
+        android:background="@drawable/textview_consulta"
+        app:layout_constraintStart_toEndOf="@id/buttVacina"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ícone de exame -->
+        <ImageView
+            android:id="@+id/iconExam"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_exam"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:text="EXAMES"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/buttNote"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="428dp"
+        android:background="@drawable/textview_consulta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/buttExam"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Ícone de observações -->
+        <ImageView
+            android:id="@+id/iconNote"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_note"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="8dp"
+            android:text="OBSERVAÇÕES"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

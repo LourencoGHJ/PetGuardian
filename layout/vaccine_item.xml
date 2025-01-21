@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/turquesa">
+
+        <TextView
+            android:id="@+id/vaccineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vacina contra a Esga"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/vaccineDose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dose: 1"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/vaccineDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data da Toma: 12/09/2018"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/vaccineLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Local: Onevet Clínica Veterinária Gondomar"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/vaccineStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Administrada"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

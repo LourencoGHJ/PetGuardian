@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebackground"
+    tools:context=".HomeVeterinario">
+
+
+    <!-- Adiciona um FrameLayout como contêiner para o fragmento -->
+
+
+    <TextView
+        android:id="@+id/text_nome_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/text_tela_cadastro"
+        app:layout_constraintTop_toBottomOf="@+id/text_tela_cadastro" />
+
+    <TextView
+        android:id="@+id/text_tela_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-Vindo(a)"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.315" />
+
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/turquesa2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_logo_petg_foreground" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatdrpet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_drpet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarviewVet2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_scroll_view"
+        android:layout_width="387dp"
+        android:layout_height="115dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topView">
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/turquesa"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item 1: Pacientes -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:id="@+id/pacientes"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:contentDescription="Pacientes"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Pacientes"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Item 2: Vacinas -->
+                <LinearLayout
+                    android:id="@+id/consulta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Consultas"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Item 3: Exames -->
+                <LinearLayout
+                    android:id="@+id/solicitacoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Solicitações"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+                <!-- Item 3: Exames -->
+                <LinearLayout
+                    android:id="@+id/examesLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Exames"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/imageViewSettings"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Abrir configurações"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+
+    <FrameLayout
+        android:id="@+id/dgavFrame"
+        style="@style/viewcontacto"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.368"
+        app:layout_constraintStart_toEndOf="@+id/calendarviewVet"
+        app:layout_constraintTop_toBottomOf="@+id/card_scroll_view">
+
+        <ImageView
+            android:id="@+id/dgavLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/description_dgav_logo"
+            android:src="@drawable/logotipo_dgav_portal_agricultura"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+
+    <View
+        android:id="@+id/calendarviewVet"
+        style="@style/viewcontacto"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_scroll_view" />
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="153dp"
+        android:layout_height="131dp"
+        android:layout_below="@id/calendarviewVet"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarviewVet"
+        app:layout_constraintEnd_toEndOf="@+id/calendarviewVet"
+        app:layout_constraintStart_toStartOf="@+id/calendarviewVet"
+        app:layout_constraintTop_toTopOf="@+id/calendarviewVet" />
+
+
+
+
+    <View
+        android:id="@+id/calendarviewVet2"
+        style="@style/viewcontacto"
+        android:layout_width="380dp"
+        android:layout_height="123dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendarviewVet" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewConsultas"
+        android:layout_width="373dp"
+        android:layout_height="92dp"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarviewVet2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/calendarviewVet2"
+        app:layout_constraintVertical_bias="0.777" />
+
+    <TextView
+        android:id="@+id/textSemConsultas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Não há consultas recentes."
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarviewVet2"
+        app:layout_constraintEnd_toEndOf="@+id/calendarviewVet2"
+        app:layout_constraintStart_toStartOf="@+id/calendarviewVet2"
+        app:layout_constraintTop_toTopOf="@+id/calendarviewVet2" />
+
+
+    <TextView
+        android:id="@+id/textTitle2"
+        android:layout_width="380dp"
+        android:layout_height="26dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="306dp"
+        android:background="@drawable/rounded_top"
+        android:text="Consultas Recentes:"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewConsultas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topView"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

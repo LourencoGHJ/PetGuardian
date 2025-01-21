@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#D3D3D3</color>
+    <color name="green">#DD047504</color>
+    <color name="red">#DDBD0404</color>
+    <color name="turquesa">#00C5CD</color>
+    <color name="turquesa1">#00F5FF</color>
+    <color name="turquesa2">#00E5EE</color>
+    <color name="turquesa3">#17ABC3</color>
+    <color name="spinner_background_color">#294167</color>
+
+
+
+    <color name="background_chat">#F9F9F9</color>
+    <color name="primary">#6200EE</color>
+
+    <color name="text_primary">#212121</color>
+    <color name="border_light">#E0E0E0</color>
+</resources>

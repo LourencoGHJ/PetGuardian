@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebackground"
+    tools:context=".Adm">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_logo_petg_foreground" />
+
+    <!-- Título da Home -->
+
+    <!-- Botão para Solicitações Pendentes -->
+
+    <TextView
+        android:id="@+id/title_adm"
+        android:layout_width="173dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="112dp"
+        android:text="Bem-vindo, Administrador"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_solicitacoes_pendentes"
+        android:layout_width="157dp"
+        android:layout_height="124dp"
+        android:layout_marginTop="88dp"
+        android:backgroundTint="@color/turquesa2"
+        android:text="Ver Solicitações Pendentes"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_adm" />
+
+    <!-- Outro botão ou item, caso necessário -->
+    <!-- Adicione novos componentes aqui -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

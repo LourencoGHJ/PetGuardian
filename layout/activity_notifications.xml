@@ -1,0 +1,31 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/turquesa2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:clipToPadding="false">
+
+        <TextView
+            android:id="@+id/emptyNotificationsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nenhuma notificação encontrada."
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/notificationsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="8dp" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

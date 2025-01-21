@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="flipper_image_width">153dp</dimen>
+    <dimen name="flipper_image_height">131dp</dimen>
+</resources>

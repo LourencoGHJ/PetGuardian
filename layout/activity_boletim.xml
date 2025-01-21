@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/consulta_background"
+    tools:context=".Boletim">
+
+    <!-- Top View -->
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/turquesa2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Título -->
+
+    <!-- Dados do Animal -->
+    <TextView
+        android:id="@+id/titleBoletim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Boletim Animal"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dadosAnimal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/textview_consulta"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/animalImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBoletim"
+        tools:text="Nome: Floquito\nEspécie: Gato\nRaça: Siamês\nIdade: 1 ano" />
+
+    <!-- Imagem do Animal -->
+    <ImageView
+        android:id="@+id/animalImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleBoletim" />
+
+    <!-- Histórico de Vacinas -->
+    <TextView
+        android:id="@+id/textVacinas"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/textview_consulta"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animalImage"
+        tools:text="Histórico de Vacinas:\n- Vacina 1 em 12/01/2024\n- Vacina 2 em 20/02/2024" />
+
+    <!-- Histórico Médico -->
+    <TextView
+        android:id="@+id/textHistoricoMedico"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/textview_consulta"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVacinas"
+        tools:text="Histórico Médico:\n- Consulta 1 em 12/03/2024 com Dr. Guilherme\n- Consulta 2 em 14/04/2024 com Dr. Marina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

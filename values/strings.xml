@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Pet Guardian</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro_v">Registar como Veterinário</string>
+    <string name="text_cadastro_p">Registar como Proprietário</string>
+    <string name="Contacto">Contactar</string>
+
+    <string name="title_cadastro">Cadastre-se</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="registarAnimal">Registar Animal</string>
+    <string name="default_web_client_id">472241570031-2te2frm5kdi6ilc7iri91627rhjkg9ur.apps.googleusercontent.com</string>
+
+    <string-array name="especies_array">
+        <item>Cão</item>
+        <item>Gato</item>
+    </string-array>
+    <string name="especie_prompt">Selecione a espécie</string>
+
+
+    <string name="selecione_raca">Selecione uma raça</string>
+
+    <string name="ConsultaPag">Consulta:</string>
+
+    <string name="prompt_tipo_vacina">Selecione o tipo de vacina</string>
+
+    <string name="description_dgav_logo">Seja direcionado ao site oficial DGAV.</string>
+
+    <string name="data_consulta">Data: %1$s</string>
+    <string name="nome_animal">Animal: %1$s</string>
+    <string name="horario_consulta">Horário: %1$s</string>
+
+</resources>

@@ -1,0 +1,62 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- Imagem do Veterinário -->
+        <ImageView
+            android:id="@+id/veterinarioImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_user_placeholder"
+            android:scaleType="centerCrop"
+            android:background="@drawable/ic_user_placeholder" />
+
+        <!-- Informações do Veterinário -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/veterinarioNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Veterinário"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/veterinarioEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email do Veterinário"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/veterinarioNumeroOrdem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de Ordem"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

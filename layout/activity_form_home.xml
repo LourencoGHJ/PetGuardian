@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/homebackground"
+    tools:context=".FormHome">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/turquesa2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_logo_petg_foreground" />
+
+
+    <TextView
+        android:id="@+id/text_tela_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Bem-Vindo(a)"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerAnimais"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/text_nome_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_tela_cadastro"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/chatdrpet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_drpet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/topView">
+
+        <HorizontalScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/turquesa"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Item 1: Boletim -->
+                <LinearLayout
+                    android:id="@+id/boletimLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_paw" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Boletim"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <!-- Item 2: Vacinas -->
+                <LinearLayout
+                    android:id="@+id/vacinasLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Vacinas"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Item 3: Exames -->
+                <LinearLayout
+                    android:id="@+id/examLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Exames"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <!-- Item 3: Veterinarios Associados -->
+                <LinearLayout
+                    android:id="@+id/veterinariosAssociadosIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/ic_paw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Veterinários"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+    <Spinner
+        android:id="@+id/spinnerVeterinario"
+        android:layout_width="match_parent"
+        android:textAlignment="textStart"
+        android:background="@drawable/spinner_background"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"
+        android:popupBackground="#FFFFFF"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="@id/topView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_scroll_view" />
+
+    <Button
+        android:id="@+id/buttonContato"
+        android:layout_width="112dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/turquesa"
+        android:text="@string/Contacto"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerVeterinario"
+        app:layout_constraintEnd_toEndOf="@+id/topView"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/spinnerVeterinario"
+        app:layout_constraintTop_toTopOf="@+id/spinnerVeterinario"
+        app:layout_constraintVertical_bias="0.173" />
+
+
+    <View
+        android:id="@+id/calendarview"
+        style="@style/viewcontacto"
+        android:layout_width="178dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerVeterinario" />
+
+    <TextView
+        android:id="@+id/text_consultas_dia"
+        android:layout_width="169dp"
+        android:layout_height="73dp"
+        android:text="Consultas do dia aparecerão aqui"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/calendarview"
+        app:layout_constraintEnd_toEndOf="@+id/calendarview"
+        app:layout_constraintStart_toStartOf="@+id/calendarview"
+        app:layout_constraintTop_toTopOf="@+id/calendarview" />
+
+
+
+    <FrameLayout
+        android:id="@+id/calendarview5"
+        style="@style/viewcontacto"
+        android:layout_width="178dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerVeterinario">
+
+        <ImageView
+            android:id="@+id/dgavLogo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/description_dgav_logo"
+            android:src="@drawable/logotipo_dgav_portal_agricultura"
+            android:scaleType="fitCenter" />
+
+    </FrameLayout>
+
+
+    <ImageView
+        android:id="@+id/openSettings"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="Abrir configurações"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <!-- Outros elementos permanecem inalterados -->
+
+
+    <FrameLayout
+        android:id="@+id/notificationFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/openSettings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Ícone de notificação -->
+
+        <ImageView
+            android:id="@+id/notifications"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Notificações"
+            android:src="@drawable/ic_notifications"
+            app:layout_constraintEnd_toStartOf="@+id/openSettings"
+            app:layout_constraintHorizontal_bias="0.963"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Bolinha vermelha -->
+        <View
+            android:id="@+id/notificationBadge"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:background="@android:color/holo_red_dark"
+            android:shape="oval"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+    <Spinner
+        android:id="@+id/spinnerAnimais"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/spinner_background"
+        android:padding="8dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toTopOf="@+id/topView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <View
+        android:id="@+id/calendarview6"
+        style="@style/viewcontacto"
+        android:layout_width="397dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spinnerVeterinario" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mapCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/chatdrpet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calendarview6">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map_view_clinica"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

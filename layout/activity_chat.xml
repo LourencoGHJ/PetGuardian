@@ -1,0 +1,59 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_chat"
+    android:fitsSystemWindows="true"
+    tools:context=".ChatActivity">
+
+    <!-- RecyclerView para exibir mensagens -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/messageContainer"
+        android:padding="10dp"
+        android:paddingTop="40dp"
+    android:clipToPadding="false"
+    android:scrollbars="none"
+    tools:listitem="@layout/item_message_sent" />
+
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <!-- Campo de entrada de mensagem -->
+        <EditText
+            android:id="@+id/inputField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Digite sua mensagem"
+            android:padding="12dp"
+            android:background="@drawable/bg_input_field"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:imeOptions="actionSend" />
+
+        <!-- Botão enviar texto -->
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_send"
+            android:src="@drawable/ic_send"
+            android:contentDescription="Enviar"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

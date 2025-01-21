@@ -1,0 +1,104 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exames"
+    android:background="@color/turquesa2">
+
+
+    <!-- View para a seção superior -->
+
+
+
+
+    <TextView
+        android:id="@+id/textExamType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exames:"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/logoImageView"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/turquesa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Logo -->
+
+    <!-- Título -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_logo_petg_foreground" />
+
+    <TextView
+        android:id="@+id/textViewExames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exames"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/logoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- RecyclerView para listar exames -->
+
+    <!-- Botão para solicitar exames -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/examRecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="294dp"
+        app:layout_constraintBottom_toTopOf="@+id/requestExamButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/requestExamButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/turquesa1"
+        android:text="Solicitar Exame"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/searchAnimalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/turquesa1"
+        android:text="Pesquisar Animal"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/requestExamButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

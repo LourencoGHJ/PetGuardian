@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/tipoVacinaSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/prompt_tipo_vacina" />
+
+
+    <EditText
+        android:id="@+id/doseEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dose" />
+
+    <EditText
+        android:id="@+id/dataVacinaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Data da Toma" />
+
+    <EditText
+        android:id="@+id/fornecedorVacinaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Fornecedor" />
+
+    <Switch
+        android:id="@+id/administradaSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administrada" />
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consulta"
+    android:background="@color/turquesa2">
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="484dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@mipmap/ic_logo_petg_foreground" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="411dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/turquesa"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <!-- Layout para exibir consultas encontradas -->
+
+        <LinearLayout
+            android:id="@+id/consultaLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp"
+            android:background="@drawable/list_item_background"
+            android:visibility="visible">
+
+        <!-- Elemento inicial que será substituído pelos resultados -->
+        <TextView
+            android:id="@+id/consultaResultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Consultas para esta data aparecerão aqui."
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/list_item_background"
+            android:textSize="16sp" />
+
+        <!-- ListView para mostrar os resultados -->
+        <ListView
+            android:id="@+id/consultaListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="16dp"
+            android:listSelector="@drawable/list_item_background"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/buscarConsultaButton"
+        android:layout_width="150dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/white"
+        android:padding="10dp"
+        android:text="Buscar Consulta"
+        android:textColor="@color/turquesa"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.933" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

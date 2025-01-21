@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegistarAnimal">
+
+    <TextView
+        android:id="@+id/title_registar_animal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/registarAnimal"
+        android:textColor="@color/turquesa"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- ScrollView para permitir rolagem do conteúdo -->
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonRegistrarAnimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_registar_animal">
+
+        <!-- ConstraintLayout dentro do ScrollView para organizar os EditTexts -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/animalImageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:background="@drawable/image_placeholder"
+                android:contentDescription="Imagem do Animal"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toTopOf="@+id/editTextMicrochip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/uploadImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/turquesa"
+                android:text="Adicionar Fotografia"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animalImageView" />
+
+            <EditText
+                android:id="@+id/editTextMicrochip"
+                style="@style/Edit_Text"
+                android:hint="Microchip"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uploadImageButton" />
+
+            <EditText
+                android:id="@+id/editTextNome"
+                style="@style/Edit_Text"
+                android:hint="Nome"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextMicrochip" />
+
+            <Spinner
+                android:id="@+id/spinnerEspecie"
+                style="@style/Edit_Text"
+                android:prompt="@string/especie_prompt"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.493"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextNome" />
+
+            <Spinner
+                android:id="@+id/spinnerRaca"
+                style="@style/Edit_Text"
+                android:prompt="@string/selecione_raca"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerEspecie" />
+
+            <EditText
+                android:id="@+id/editTextdataNascimento"
+                style="@style/Edit_Text"
+                android:clickable="true"
+                android:focusable="false"
+                android:hint="Data Nascimento"
+                android:inputType="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinnerRaca" />
+
+            <EditText
+                android:id="@+id/editTextIdade"
+                style="@style/Edit_Text"
+                android:hint="Idade"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextdataNascimento" />
+
+
+            <EditText
+                android:id="@+id/editTexthistoricoVacina"
+                style="@style/Edit_Text"
+                android:hint="Histórico Vacina"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTextIdade" />
+
+            <EditText
+                android:id="@+id/editTextHistoricoMedico"
+                style="@style/Edit_Text"
+                android:hint="Histórico Médico"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/editTexthistoricoVacina" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonRegistrarAnimal"
+        android:layout_width="133dp"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/turquesa"
+        android:text="Registar"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageSuccessAnimal"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/logo"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/scrollView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textSuccessAnimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Animal cadastrado com sucesso!"
+        android:textColor="@color/turquesa"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/imageSuccessAnimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
